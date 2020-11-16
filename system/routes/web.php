@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\PromoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,11 @@ Route::delete('produk/{produk}',[ProdukController:: class, 'destroy']);
 
 
 
+Route::get('promo',[PromoController:: class,'index']);
+Route::get('promo/create',[PromoController:: class,'create']);
+Route::post('promo',[PromoController:: class,'store']);
+Route::get('promo/{promo}',[PromoController:: class, 'show']);
+Route::get('promo/{promo}/edit',[PromoController:: class, 'edit']);
+Route::put('promo/{promo}',[PromoController:: class, 'update']);
+Route::delete('promo/{promo}',[PromoController:: class, 'destroy']);
 

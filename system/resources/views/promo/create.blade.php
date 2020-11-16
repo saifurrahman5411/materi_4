@@ -8,7 +8,7 @@
 				<div class="card mt-4">
 					<div class="card-header">
 						promo terbaru
-						<form action="{{url('produk')}}" method="post">
+						<form action="{{url('promo')}}" method="post">
 							@csrf
 					</div>
 					<div class="card-body">
@@ -23,26 +23,11 @@
 						<input type="text" name="harga" class="form-control">
 					</div>
 					</div>
-					<div class="col-md-3">
 						<div class="form-group">
 							<label class="control-label" for="">berat</label>
 							<input type="text" name="berat" class="form-control">
 						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="form-group">
-							<label class="control-label" for="">stok</label>
-							<input type="text" name="stok" class="form-control">
-						</div>
-					</div>
 				</div>
-				<div class="col-md-3">
-					</div>			
-					<div class="form-group">
-						<label class="control-label" for="">Deskripsi</label>
-						<textarea name="deskripsi" class="form-control"></textarea>
-					</div>
-					
 					<button class="btn btn-dark float-right"><i class="fa fa-save"> simpan</i></button>
 					</form>
 					</div>

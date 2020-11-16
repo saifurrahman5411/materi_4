@@ -7,8 +7,8 @@
 			<div class="col-md-12">
 				<div class="card mt-4">
 					<div class="card-header">
-						Data Produk
-						<a href="{{url('produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus">  Tambah Data</i></a>
+						Data Promo
+						<a href="{{url('promo/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus">  Tambah Data</i></a>
 					</div>
 					<div class="card-body">
 						<table class="table">
@@ -17,22 +17,22 @@
 								<th>Aksi</th>
 								<th>Nama</th>
 								<th>Harga</th>
-								<th>Stok</th>
+								<th>berat</th>
 							</thead>
 							<tbody>
-								@foreach($list_produk as $produk)
+								@foreach($list_promo as $promo)
 								<tr>
 									<td>{{$loop->iteration}}</td>
 									<td>
 										<div class="btn-group">
-										<a href="{{url('produk', $produk->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-										<a href="{{url('produk', $produk->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-										@include('template.util.delete', ['url' => url('produk', $produk->id)])
+										<a href="{{url('promo', $promo->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+										<a href="{{url('promo', $promo->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+										@include('template.util.delete', ['url' => url('promo', $promo->id)])
 										</div>
 									</td>
-									<td>{{$produk->nama}}</td>
-									<td>{{$produk->harga}}</td>
-									<td>{{$produk->stok}}</td>
+									<td>{{$promo->nama}}</td>
+									<td>{{$promo->harga}}</td>
+									<td>{{$promo->berat}}</td>
 								</tr>
 								@endforeach
 							</tbody>							
